@@ -1,0 +1,279 @@
+---
+// Component: QuoteForm.astro for Computers Gold Coast
+// Web3Forms API Direct Backend Integration (Zero Heavy Plugins / 100% Native Vanilla JS)
+---
+<section id="quote" class="py-20 relative overflow-hidden scroll-mt-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="glass-box rounded-3xl p-8 sm:p-12 border-2 border-slate-200 dark:border-white/15 relative overflow-hidden shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left Info Column -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-black text-blue-600 dark:text-cyan-400 uppercase tracking-widest px-3.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800/50">
+            Direct Installation Dispatch
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight uppercase">
+            Request a CCTV Quote
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+            Ask only for details that improve the first response. Keep the form usable on mobile and show what happens after submission.
+          </p>
+
+          <ul class="space-y-3 text-sm sm:text-base text-slate-700 dark:text-slate-300 pt-2 border-t border-slate-200 dark:border-white/10">
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-500 font-bold">✓</span>
+              <span><strong>No obligation:</strong> Free detailed written proposal with zero sales pressure.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-500 font-bold">✓</span>
+              <span><strong>Written scope:</strong> Itemized hardware, storage, and installation breakdown.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-500 font-bold">✓</span>
+              <span><strong>Clear warranty terms:</strong> Separate equipment (3-Yr) and workmanship (5-Yr) guarantees.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-500 font-bold">✓</span>
+              <span><strong>Preferred contact method:</strong> Choose phone call, SMS or email response at your preferred timing.</span>
+            </li>
+          </ul>
+
+          <div class="p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/50 text-sm sm:text-base text-slate-700 dark:text-slate-300">
+            Prefer to speak right now? Call our local technician directly: <br>
+            <a href="tel:+61447266455" class="text-blue-600 dark:text-cyan-400 font-black text-base sm:text-lg block mt-1">0447 266 455</a>
+          </div>
+        </div>
+
+        <!-- Right Interactive Form Column -->
+        <div class="lg:col-span-7">
+          
+          <form 
+            action="https://api.web3forms.com/submit" 
+            method="POST" 
+            id="cctv-quote-form" 
+            class="space-y-4 transition-opacity duration-300"
+          >
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="cd39c6a4-dde5-42ea-88e7-8b438916b485" />
+            <input type="hidden" name="subject" value="New CCTV Quote Request - Computers Gold Coast" />
+            <input type="hidden" name="from_name" value="Computers Gold Coast Web Leads" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+            <!-- Row 1: Name & Suburb -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5" for="form-name">Your Name *</label>
+                <input type="text" required id="form-name" name="name" placeholder="e.g. David Lin" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" />
+              </div>
+
+              <div>
+                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5" for="form-suburb">Suburb / Postcode *</label>
+                <input type="text" required id="form-suburb" name="suburb" placeholder="e.g. Surfers Paradise 4217" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" />
+              </div>
+            </div>
+
+            <!-- Row 2: Email & Phone -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5" for="form-email">Email Address *</label>
+                <input type="email" required id="form-email" name="email" placeholder="e.g. name@example.com" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" />
+              </div>
+
+              <div>
+                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5" for="form-phone">Phone / Mobile Contact *</label>
+                <input type="tel" required id="form-phone" name="phone" placeholder="e.g. 0400 000 000" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" />
+              </div>
+            </div>
+
+            <!-- Row 3: Property Type & Service -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5" for="form-property">Property Type</label>
+                <select id="form-property" name="propertyType" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-3.5 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors">
+                  <option value="Home / Residential">Home / Residential</option>
+                  <option value="Commercial Business">Commercial Business / Retail</option>
+                  <option value="Holiday Apartment / Rental">Holiday Apartment / Rental</option>
+                  <option value="Body Corporate / Strata">Body Corporate / Strata</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5" for="form-service">Service Required</label>
+                <select id="form-service" name="serviceType" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-3.5 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors">
+                  <option value="New Complete CCTV System">New Complete CCTV System</option>
+                  <option value="BYO Camera Installation">BYO (Customer Supplied) Cameras</option>
+                  <option value="CCTV Repair or Upgrade">Repair Dead / Offline System</option>
+                  <option value="CCTV Upgrade to 4K">Upgrade Analogue to 4K Digital</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Row 4: Camera Count & Storeys -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5" for="form-cameras">Approximate Camera Count</label>
+                <select id="form-cameras" name="cameraCount" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-3.5 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors">
+                  <option value="4 Cameras">4 Cameras (Most Popular)</option>
+                  <option value="2-3 Cameras">2 - 3 Cameras</option>
+                  <option value="5-6 Cameras">5 - 6 Cameras</option>
+                  <option value="8+ Cameras">8+ Commercial Cameras</option>
+                  <option value="Need Advice">Not Sure / Recommend to Me</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5" for="form-storeys">Storey &amp; Structure</label>
+                <select id="form-storeys" name="storeys" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-3.5 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors">
+                  <option value="Single Storey">Single Storey</option>
+                  <option value="Double Storey">Double Storey</option>
+                  <option value="High Rise / Apartment">High Rise / Apartment Complex</option>
+                  <option value="Commercial Warehouse/Shop">Commercial Shop / Warehouse</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Row 5: Description & Notes -->
+            <div>
+              <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5" for="form-notes">What would you like the cameras to cover? *</label>
+              <textarea id="form-notes" name="message" rows="3" required placeholder="e.g. Front driveway, side gate, rear pool area, package deliveries at front door..." class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm sm:text-base text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+            </div>
+
+            <!-- Error Banner -->
+            <div id="quote-error" class="hidden p-4 rounded-xl bg-red-500/15 border border-red-500/30 text-red-400 text-xs sm:text-sm font-bold">
+              Unable to submit form. Please call us directly at 0447 266 455.
+            </div>
+
+            <!-- Submit Button with Loading State -->
+            <button 
+              type="submit" 
+              id="quote-submit-btn" 
+              class="w-full py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-sm sm:text-base uppercase tracking-wider shadow-xl shadow-blue-500/30 transition-all transform hover:-translate-y-0.5 cursor-pointer flex items-center justify-center gap-2"
+            >
+              <span id="btn-text">Request Itemised Quote &rarr;</span>
+              <span id="btn-spinner" class="hidden items-center gap-2">
+                <svg class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+                </svg>
+                <span>Sending Your Quote Request...</span>
+              </span>
+            </button>
+          </form>
+
+          <!-- Success Message UI (Initially Hidden) -->
+          <div 
+            id="quote-success" 
+            class="hidden rounded-3xl p-8 sm:p-10 bg-white dark:bg-gradient-to-b dark:from-slate-900/90 dark:to-slate-950 border-2 border-emerald-500/50 text-center space-y-5 shadow-2xl transition-all duration-500"
+          >
+            <div class="w-20 h-20 rounded-full bg-emerald-500/15 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-2 border-emerald-500/50 flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/15">
+              <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+
+            <div class="space-y-2">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/15 border border-emerald-300 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-black uppercase tracking-wider">
+                <span>✓ Transmission Confirmed</span>
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+                Quote Request Received!
+              </h3>
+              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+                Thank you! Your property information has been sent directly to our licensed Gold Coast installation team. We will review your layout and send an itemized written estimate within <strong>15–30 minutes</strong> during trade hours.
+              </p>
+            </div>
+
+            <!-- Technician Contact Box -->
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-white/10 max-w-md mx-auto text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-1">
+              <div class="font-bold text-slate-900 dark:text-white">Need an immediate on-site response or emergency repair?</div>
+              <div>Direct Dispatch Hotline: <a href="tel:+61447266455" class="text-blue-600 dark:text-cyan-400 font-black text-sm sm:text-base underline hover:text-blue-700 dark:hover:text-cyan-300 ml-1">0447 266 455</a></div>
+            </div>
+
+            <div class="pt-2">
+              <button 
+                type="button" 
+                onclick="resetQuoteForm()" 
+                class="text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white underline transition-colors cursor-pointer"
+              >
+                ← Submit another inquiry or modify details
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Native Vanilla JavaScript Backend Handler -->
+<script is:inline>
+  (function() {
+    const form = document.getElementById('cctv-quote-form');
+    const successBox = document.getElementById('quote-success');
+    const submitBtn = document.getElementById('quote-submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnSpinner = document.getElementById('btn-spinner');
+    const errorBox = document.getElementById('quote-error');
+
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        if (submitBtn) submitBtn.disabled = true;
+        if (btnText) btnText.classList.add('hidden');
+        if (btnSpinner) {
+          btnSpinner.classList.remove('hidden');
+          btnSpinner.classList.add('flex');
+        }
+        if (errorBox) errorBox.classList.add('hidden');
+
+        const formData = new FormData(form);
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        })
+        .then(async function(response) {
+          const json = await response.json();
+          if (response.status === 200 && json.success) {
+            form.classList.add('hidden');
+            if (successBox) {
+              successBox.classList.remove('hidden');
+              successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          } else {
+            throw new Error(json.message || 'Submission error');
+          }
+        })
+        .catch(function(err) {
+          if (errorBox) {
+            errorBox.textContent = 'Submission failed: ' + (err.message || 'Please check your network or call us directly at 0447 266 455.');
+            errorBox.classList.remove('hidden');
+          }
+        })
+        .finally(function() {
+          if (submitBtn) submitBtn.disabled = false;
+          if (btnText) btnText.classList.remove('hidden');
+          if (btnSpinner) {
+            btnSpinner.classList.add('hidden');
+            btnSpinner.classList.remove('flex');
+          }
+        });
+      });
+    }
+
+    window.resetQuoteForm = function() {
+      if (form && successBox) {
+        form.reset();
+        successBox.classList.add('hidden');
+        form.classList.remove('hidden');
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    };
+  })();
+</script>

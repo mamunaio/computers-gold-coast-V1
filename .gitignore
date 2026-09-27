@@ -1,10 +1,11 @@
-node_modules/
+# build output
 dist/
+# dependencies
+node_modules/
+# generated types
 .astro/
+# environment
 .env
 .env.production
+# macOS / editor
 .DS_Store
-robert/
- 
-*.7z
-*.zip

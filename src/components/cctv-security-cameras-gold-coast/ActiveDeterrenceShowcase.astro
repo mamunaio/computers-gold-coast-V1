@@ -1,0 +1,189 @@
+---
+// Component: ActiveDeterrenceShowcase.astro
+// Positioned directly below ServicesGrid (Professional Security Services)
+// Matches exact high-impact design: "THE BEST CRIME IS THE ONE THAT NEVER HAPPENS"
+// Fully optimized for both Light Mode and Dark Mode for Gold Coast
+---
+
+<section class="py-20 sm:py-28 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white relative overflow-hidden border-b border-slate-200 dark:border-white/10 transition-colors duration-300" id="active-deterrence">
+  <!-- Soft Ambient Glow Backgrounds (Red on Left, Blue on Right) -->
+  <div class="absolute top-1/3 -left-32 w-96 h-96 bg-red-500/8 dark:bg-red-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute top-1/3 -right-32 w-96 h-96 bg-blue-500/8 dark:bg-blue-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-amber-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header (Exact Copy from Design) -->
+    <div class="text-center max-w-4xl mx-auto mb-12 sm:mb-16 space-y-3.5">
+      <!-- Main Headline with Red Accent -->
+      <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-[1.1]">
+        THE BEST CRIME IS THE ONE <span class="text-[#FF3B30] text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-[#FF3B30] to-red-500">THAT NEVER HAPPENS.</span>
+      </h2>
+
+      <!-- Subtitle Description -->
+      <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto leading-relaxed font-normal pt-1">
+        Why just film a robbery? Whether it's a new Camera or upgrading your old dated CCTV system on the Gold Coast &ndash; Our cameras can defend your property perimeter, hitting trespassers with warning lights and loud sirens the second they step foot on your property. Basic systems only give you a copy of the crime that's already been done and they've already gotten away.
+      </p>
+
+      <!-- Large Flashing Voice Warning (Flashes On & Off) -->
+      <div class="pt-6 pb-2 text-center max-w-4xl mx-auto select-none">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-500/10 dark:bg-red-500/15 border border-red-500/30 text-red-600 dark:text-red-400 text-xs font-mono font-bold tracking-widest uppercase mb-3">
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+          <span>110dB Autonomous Voice &amp; Siren Deterrent</span>
+        </div>
+        <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#FF3B30] animate-strobe-blink leading-tight">
+          &ldquo;You&rsquo;re Being Recorded and the Owner Has Been Notified&rdquo;
+        </p>
+      </div>
+    </div>
+
+    <!-- Center Stage Showcase (Desktop: 3 Columns with Central Floating Camera, Mobile: Stacked) -->
+    <div class="relative max-w-6xl mx-auto">
+      
+      <!-- Desktop Layout (lg:grid lg:grid-cols-12 items-center) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+        
+        <!-- Left Callouts Column (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-8 sm:space-y-12 lg:space-y-24 order-2 lg:order-1 text-center lg:text-left">
+          
+          <!-- Callout 1: Active Deterrence -->
+          <div class="space-y-1 group">
+            <span class="text-[11px] font-black uppercase tracking-widest text-[#FF3B30] block">
+              ACTIVE DETERRENCE
+            </span>
+            <div class="inline-block border-b-2 border-[#FF3B30] dark:border-[#FF3B30]/60 pb-1">
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                Red &amp; Blue Warning Lights
+              </h3>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-1 hidden lg:block">
+              Rapid flashing police strobes signal instant detection.
+            </p>
+          </div>
+
+          <!-- Callout 2: Audio Warning -->
+          <div class="space-y-1 group">
+            <span class="text-[11px] font-black uppercase tracking-widest text-amber-600 dark:text-amber-500 block">
+              AUDIO WARNING
+            </span>
+            <div class="inline-block border-b-2 border-amber-500 dark:border-amber-500/60 pb-1">
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                Built-in 110dB Siren
+              </h3>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-1 hidden lg:block">
+              Loud audible alarm or customizable voice warnings.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Center Image Stage (lg:col-span-6) -->
+        <div class="lg:col-span-6 flex items-center justify-center order-1 lg:order-2 py-4 sm:py-6">
+          <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl group">
+            
+            <!-- Soft Radial Halo Behind Cameras (Adapts to Light & Dark Theme) -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-red-500/15 via-slate-200/50 to-blue-500/15 dark:from-red-600/20 dark:via-transparent dark:to-blue-600/20 rounded-full blur-3xl group-hover:scale-105 transition-transform duration-700 pointer-events-none"></div>
+
+            <!-- Dahua TiOC Cameras: White (Top) & Black (Bottom) -->
+            <img 
+              src="/dahua-tioc-cameras.png" 
+              alt="Dahua TiOC Three-in-One Cameras in White and Black with Active Red and Blue Warning Lights and Siren" 
+              class="w-full h-auto object-contain relative z-10 drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)] dark:drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] transform group-hover:scale-102 transition-transform duration-700 select-none pointer-events-none"
+              loading="eager"
+            />
+
+            <!-- Subtle Live Pulse Indicators on Strobe Lenses -->
+            <div class="absolute top-[39%] right-[44%] w-3 h-3 rounded-full bg-blue-500/60 blur-xs animate-ping pointer-events-none"></div>
+            <div class="absolute bottom-[24%] left-[44%] w-3 h-3 rounded-full bg-red-500/60 blur-xs animate-ping pointer-events-none"></div>
+
+          </div>
+        </div>
+
+        <!-- Right Callouts Column (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-8 sm:space-y-12 lg:space-y-24 order-3 text-center lg:text-left">
+          
+          <!-- Callout 3: AI Detection -->
+          <div class="space-y-1 group">
+            <span class="text-[11px] font-black uppercase tracking-widest text-blue-600 dark:text-blue-400 block">
+              AI DETECTION
+            </span>
+            <div class="inline-block border-b-2 border-blue-600 dark:border-blue-500/60 pb-1">
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                Human &amp; Vehicle Filter
+              </h3>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-1 hidden lg:block">
+              Eliminates false alarms from rain, wind, leaves and pets.
+            </p>
+          </div>
+
+          <!-- Callout 4: Communication -->
+          <div class="space-y-1 group">
+            <span class="text-[11px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 block">
+              COMMUNICATION
+            </span>
+            <div class="inline-block border-b-2 border-slate-400 dark:border-slate-500/60 pb-1">
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                2-Way Audio Speaker
+              </h3>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-1 hidden lg:block">
+              Talk directly to visitors or intruders in real time.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom Action CTA Buttons -->
+    <div class="mt-14 sm:mt-18 pt-4 flex flex-wrap items-center justify-center gap-4 text-center">
+      <a 
+        href="#quote" 
+        onclick="prefillQuote('Dahua 4K TiOC Active Deterrence System', 'Home / Residential')"
+        class="px-8 py-4 rounded-xl bg-gradient-to-r from-red-600 via-amber-600 to-blue-600 hover:from-red-500 hover:to-blue-500 text-white font-black text-xs uppercase tracking-wider shadow-xl shadow-red-600/30 transition-all transform hover:-translate-y-0.5 cursor-pointer"
+      >
+        Get Dahua TiOC System Quote &rarr;
+      </a>
+
+      <a 
+        href="tel:+61447266455" 
+        class="px-7 py-4 rounded-xl bg-white dark:bg-slate-900/90 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-white font-bold text-xs flex items-center gap-2 border border-slate-300 dark:border-white/15 transition-all shadow-sm"
+      >
+        <span>Direct Technician Call: 0447 266 455</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Authentic Emergency On/Off Flashing Strobe for Voice Warning -->
+<style>
+  @keyframes alert-strobe-blink {
+    0%, 48% {
+      opacity: 1;
+      text-shadow: 0 0 16px rgba(255, 59, 48, 0.85), 0 0 35px rgba(255, 59, 48, 0.45);
+      filter: drop-shadow(0 0 8px rgba(255, 59, 48, 0.6));
+      transform: scale(1.008);
+    }
+    52%, 96% {
+      opacity: 0.08;
+      text-shadow: none;
+      filter: none;
+      transform: scale(0.995);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 16px rgba(255, 59, 48, 0.85), 0 0 35px rgba(255, 59, 48, 0.45);
+      filter: drop-shadow(0 0 8px rgba(255, 59, 48, 0.6));
+      transform: scale(1.008);
+    }
+  }
+
+  .animate-strobe-blink {
+    animation: alert-strobe-blink 1.5s infinite ease-in-out;
+  }
+</style>

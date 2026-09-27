@@ -1,0 +1,38 @@
+# Cloudflare Pages redirects.
+#
+# NOTE: Old URLs that kept the same slug are already redirected automatically by
+# Cloudflare Pages -- both /slug/ and /slug.html send a 308 to the clean /slug.
+# So only pages whose slug CHANGED or was REMOVED need an entry here.
+#
+# Retired pages (folded into another page):
+/setup-new-equipment-gold-coast       /new-computer-setup-gold-coast   301
+/setup-new-equipment-gold-coast.html  /new-computer-setup-gold-coast   301
+
+/apple-mac-repairs-gold-coast /mac-repairs-gold-coast 301
+
+/cctv-security-cameras-gold-coast       /services/cctv-security-cameras-gold-coast   301
+/cctv-security-cameras-gold-coast.html  /services/cctv-security-cameras-gold-coast   301
+
+# Old WordPress URLs reported as 404 in Search Console, July 2026.
+# Each target verified live before adding.
+/network-setup-gold-coast            /wireless-networks-setup-gold-coast   301
+/network-setup-gold-coast.html       /wireless-networks-setup-gold-coast   301
+/training-gold-coast                 /computer-training-gold-coast         301
+/training-gold-coast.html            /computer-training-gold-coast         301
+/computer-setup-gold-coast           /new-computer-setup-gold-coast        301
+/computer-setup-gold-coast.html      /new-computer-setup-gold-coast        301
+/virus-removal-gold-coast            /virus-spyware-removal-gold-coast     301
+/virus-removal-gold-coast.html       /virus-spyware-removal-gold-coast     301
+/website-design-gold-coast           /new-website-design-gold-coast        301
+/website-design-gold-coast.html      /new-website-design-gold-coast        301
+/smart-seo-services-gold-coast       /seo-services-gold-coast              301
+/smart-seo-services-gold-coast.html  /seo-services-gold-coast              301
+/quote                               /contact                              301
+/quote.html                          /contact                              301
+/index.php                           /                                     301
+
+# Deliberately NOT redirected -- these have no equivalent page, so a clean 404
+# tells Google to drop them. Sending them to the homepage would register as a
+# soft 404 instead, which lingers in the index:
+#   /partners/     (old WordPress page, no replacement)
+#   /sample-page/  (WordPress default, never real content)
