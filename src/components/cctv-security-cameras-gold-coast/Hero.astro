@@ -1,5 +1,22 @@
 ---
 // Component: Hero.astro for CCTV Security Cameras Gold Coast
+interface Props {
+  heading?: string;
+  description?: string;
+  suburb?: string;
+}
+
+const {
+  heading = "CCTV & Security Camera Installation in Gold Coast",
+  description = "Professionally installed hard-wired camera systems for local Gold Coast homes and businesses, with tidy cabling, clear night footage, mobile viewing and reliable ongoing support.",
+  suburb = "Gold Coast",
+} = Astro.props;
+
+// Format heading with gradient on the suburb if present
+const suburbIndex = suburb && heading ? heading.lastIndexOf(suburb) : -1;
+const headingPrefix = suburbIndex !== -1 ? heading.slice(0, suburbIndex) : heading;
+const headingHighlight = suburbIndex !== -1 ? suburb : '';
+const headingSuffix = suburbIndex !== -1 ? heading.slice(suburbIndex + suburb.length) : '';
 ---
 <section class="relative pt-10 pb-20 lg:pt-14 lg:pb-24 overflow-hidden" id="hero-section">
   <!-- Ambient Lighting Glows -->
@@ -20,12 +37,16 @@
 
         <!-- Strict H1 -->
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.08]">
-          CCTV &amp; Security Camera Installation in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700">Gold Coast</span>
+          {headingHighlight ? (
+            <Fragment>{headingPrefix}<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700">{headingHighlight}</span>{headingSuffix}</Fragment>
+          ) : (
+            heading
+          )}
         </h1>
 
         <!-- Lead Paragraph -->
         <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-          Professionally installed hard-wired camera systems for local Gold Coast homes and businesses, with tidy cabling, clear night footage, mobile viewing and reliable ongoing support.
+          {description}
         </p>
 
         <!-- Button Row -->

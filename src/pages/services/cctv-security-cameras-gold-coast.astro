@@ -1,4 +1,5 @@
 ---
+import { getCctvContent } from '../../lib/content-client';
 import ActiveDeterrenceShowcase from '../../components/cctv-security-cameras-gold-coast/ActiveDeterrenceShowcase.astro';
 import Faq from '../../components/cctv-security-cameras-gold-coast/Faq.astro';
 import FeaturedAwards from '../../components/cctv-security-cameras-gold-coast/FeaturedAwards.astro';
@@ -21,14 +22,20 @@ import SystemComparison from '../../components/cctv-security-cameras-gold-coast/
 import TrustBadges from '../../components/cctv-security-cameras-gold-coast/TrustBadges.astro';
 import WomBadges from '../../components/cctv-security-cameras-gold-coast/WomBadges.astro';
 import CctvLayout from '../../layouts/CctvLayout.astro';
+
+const content = await getCctvContent('gold-coast');
 ---
 
-<CctvLayout 
-  title="CCTV & Security Camera Installation Gold Coast | Computers Gold Coast" 
-  description="Professionally installed CCTV & security camera systems for local homes and businesses in Surfers Paradise, Southport, Broadbeach, Robina, Burleigh Heads, and wider Gold Coast. Licensed QLD installers, tidy cabling, clear night vision, mobile viewing."
+<CctvLayout
+  title={content.seo.title}
+  description={content.seo.description}
 >
   <Header />
-  <Hero />
+  <Hero
+    heading={content.hero.heading}
+    description={content.hero.description}
+    suburb={content.site.suburb}
+  />
   <TrustBadges />
   <MasterCablerSection />
   <FeaturedAwards />
